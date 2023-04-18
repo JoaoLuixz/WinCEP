@@ -15,7 +15,8 @@ namespace WinCEP
             CEP cep = consultaCEP.Consultar(MtxtCEP.Text);
             txtEndereco.Text = cep.Logradouro;
             txtCidade.Text = $"{cep.Localidade} / {cep.Uf}";
-            
+            txtComplemento.Text = cep.Complemento;
+
         }
 
         private void lbCEP_Click(object sender, EventArgs e)
@@ -27,5 +28,11 @@ namespace WinCEP
         {
 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+        }
+        
     }
 }

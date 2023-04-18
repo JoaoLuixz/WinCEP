@@ -28,107 +28,128 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbCEP = new System.Windows.Forms.Label();
-            this.btnEncontraCEP = new System.Windows.Forms.Button();
-            this.txtEndereco = new System.Windows.Forms.TextBox();
-            this.txtCidade = new System.Windows.Forms.TextBox();
-            this.MtxtCEP = new System.Windows.Forms.MaskedTextBox();
-            this.lbEndereco = new System.Windows.Forms.Label();
-            this.lbCidade = new System.Windows.Forms.Label();
-            this.lbTituloCEP = new System.Windows.Forms.Label();
-            this.SuspendLayout();
+            lbCEP = new Label();
+            btnEncontraCEP = new Button();
+            txtEndereco = new TextBox();
+            txtCidade = new TextBox();
+            MtxtCEP = new MaskedTextBox();
+            lbEndereco = new Label();
+            lbCidade = new Label();
+            lbTituloCEP = new Label();
+            lbComplemento = new Label();
+            txtComplemento = new TextBox();
+            SuspendLayout();
             // 
             // lbCEP
             // 
-            this.lbCEP.AutoSize = true;
-            this.lbCEP.Location = new System.Drawing.Point(60, 116);
-            this.lbCEP.Name = "lbCEP";
-            this.lbCEP.Size = new System.Drawing.Size(49, 23);
-            this.lbCEP.TabIndex = 0;
-            this.lbCEP.Text = "CEP:";
-            this.lbCEP.Click += new System.EventHandler(this.lbCEP_Click);
+            lbCEP.AutoSize = true;
+            lbCEP.Location = new Point(267, 65);
+            lbCEP.Name = "lbCEP";
+            lbCEP.Size = new Size(49, 23);
+            lbCEP.TabIndex = 0;
+            lbCEP.Text = "CEP:";
+            lbCEP.TextAlign = ContentAlignment.MiddleCenter;
+            lbCEP.Click += lbCEP_Click;
             // 
             // btnEncontraCEP
             // 
-            this.btnEncontraCEP.Location = new System.Drawing.Point(210, 113);
-            this.btnEncontraCEP.Name = "btnEncontraCEP";
-            this.btnEncontraCEP.Size = new System.Drawing.Size(102, 30);
-            this.btnEncontraCEP.TabIndex = 2;
-            this.btnEncontraCEP.Text = "Buscar";
-            this.btnEncontraCEP.UseVisualStyleBackColor = true;
-            this.btnEncontraCEP.Click += new System.EventHandler(this.btnEncontraCEP_Click);
+            btnEncontraCEP.Location = new Point(238, 128);
+            btnEncontraCEP.Name = "btnEncontraCEP";
+            btnEncontraCEP.Size = new Size(102, 30);
+            btnEncontraCEP.TabIndex = 2;
+            btnEncontraCEP.Text = "Buscar";
+            btnEncontraCEP.UseVisualStyleBackColor = true;
+            btnEncontraCEP.Click += btnEncontraCEP_Click;
             // 
             // txtEndereco
             // 
-            this.txtEndereco.Location = new System.Drawing.Point(108, 149);
-            this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(396, 30);
-            this.txtEndereco.TabIndex = 2;
+            txtEndereco.Location = new Point(164, 195);
+            txtEndereco.Name = "txtEndereco";
+            txtEndereco.Size = new Size(396, 30);
+            txtEndereco.TabIndex = 2;
             // 
             // txtCidade
             // 
-            this.txtCidade.Location = new System.Drawing.Point(108, 185);
-            this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(396, 30);
-            this.txtCidade.TabIndex = 3;
+            txtCidade.Location = new Point(164, 275);
+            txtCidade.Name = "txtCidade";
+            txtCidade.Size = new Size(162, 30);
+            txtCidade.TabIndex = 3;
             // 
             // MtxtCEP
             // 
-            this.MtxtCEP.Location = new System.Drawing.Point(108, 113);
-            this.MtxtCEP.Mask = "00000-000";
-            this.MtxtCEP.Name = "MtxtCEP";
-            this.MtxtCEP.Size = new System.Drawing.Size(96, 30);
-            this.MtxtCEP.TabIndex = 1;
-            this.MtxtCEP.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.MtxtCEP_MaskInputRejected);
+            MtxtCEP.Location = new Point(238, 92);
+            MtxtCEP.Mask = "00000-000";
+            MtxtCEP.Name = "MtxtCEP";
+            MtxtCEP.Size = new Size(102, 30);
+            MtxtCEP.TabIndex = 1;
+            MtxtCEP.MaskInputRejected += MtxtCEP_MaskInputRejected;
             // 
             // lbEndereco
             // 
-            this.lbEndereco.AutoSize = true;
-            this.lbEndereco.Location = new System.Drawing.Point(12, 152);
-            this.lbEndereco.Name = "lbEndereco";
-            this.lbEndereco.Size = new System.Drawing.Size(96, 23);
-            this.lbEndereco.TabIndex = 6;
-            this.lbEndereco.Text = "Endereço:";
+            lbEndereco.AutoSize = true;
+            lbEndereco.Location = new Point(62, 198);
+            lbEndereco.Name = "lbEndereco";
+            lbEndereco.Size = new Size(96, 23);
+            lbEndereco.TabIndex = 6;
+            lbEndereco.Text = "Endereço:";
             // 
             // lbCidade
             // 
-            this.lbCidade.AutoSize = true;
-            this.lbCidade.Location = new System.Drawing.Point(-2, 188);
-            this.lbCidade.Name = "lbCidade";
-            this.lbCidade.Size = new System.Drawing.Size(110, 23);
-            this.lbCidade.TabIndex = 7;
-            this.lbCidade.Text = "Cidade / uf:";
+            lbCidade.AutoSize = true;
+            lbCidade.Location = new Point(48, 278);
+            lbCidade.Name = "lbCidade";
+            lbCidade.Size = new Size(110, 23);
+            lbCidade.TabIndex = 7;
+            lbCidade.Text = "Cidade / uf:";
             // 
             // lbTituloCEP
             // 
-            this.lbTituloCEP.AutoSize = true;
-            this.lbTituloCEP.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbTituloCEP.Location = new System.Drawing.Point(189, 9);
-            this.lbTituloCEP.Name = "lbTituloCEP";
-            this.lbTituloCEP.Size = new System.Drawing.Size(192, 23);
-            this.lbTituloCEP.TabIndex = 8;
-            this.lbTituloCEP.Text = "Encontra CEP 3000";
+            lbTituloCEP.AutoSize = true;
+            lbTituloCEP.Font = new Font("Tahoma", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lbTituloCEP.Location = new Point(189, 9);
+            lbTituloCEP.Name = "lbTituloCEP";
+            lbTituloCEP.Size = new Size(192, 23);
+            lbTituloCEP.TabIndex = 8;
+            lbTituloCEP.Text = "Encontra CEP 3000";
+            // 
+            // lbComplemento
+            // 
+            lbComplemento.AutoSize = true;
+            lbComplemento.Location = new Point(332, 278);
+            lbComplemento.Name = "lbComplemento";
+            lbComplemento.Size = new Size(138, 23);
+            lbComplemento.TabIndex = 9;
+            lbComplemento.Text = "Complemento: ";
+            // 
+            // txtComplemento
+            // 
+            txtComplemento.Location = new Point(462, 275);
+            txtComplemento.Name = "txtComplemento";
+            txtComplemento.Size = new Size(98, 30);
+            txtComplemento.TabIndex = 10;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(605, 422);
-            this.Controls.Add(this.lbTituloCEP);
-            this.Controls.Add(this.lbCidade);
-            this.Controls.Add(this.lbEndereco);
-            this.Controls.Add(this.MtxtCEP);
-            this.Controls.Add(this.txtCidade);
-            this.Controls.Add(this.txtEndereco);
-            this.Controls.Add(this.btnEncontraCEP);
-            this.Controls.Add(this.lbCEP);
-            this.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(10F, 23F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(605, 422);
+            Controls.Add(txtComplemento);
+            Controls.Add(lbComplemento);
+            Controls.Add(lbTituloCEP);
+            Controls.Add(lbCidade);
+            Controls.Add(lbEndereco);
+            Controls.Add(MtxtCEP);
+            Controls.Add(txtCidade);
+            Controls.Add(txtEndereco);
+            Controls.Add(btnEncontraCEP);
+            Controls.Add(lbCEP);
+            Font = new Font("Tahoma", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            Margin = new Padding(4, 5, 4, 5);
+            Name = "Form1";
+            Text = "Form1";
+            Load += Form1_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -141,5 +162,7 @@
         private Label lbEndereco;
         private Label lbCidade;
         private Label lbTituloCEP;
+        private Label lbComplemento;
+        private TextBox txtComplemento;
     }
 }
